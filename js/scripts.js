@@ -1,10 +1,12 @@
 $(document).ready(function() {
 
-  $("#formOne").submit(function(event) {
-    var nameInput = $("input#name").val();
-    console.log(nameInput);
+  $("#shoutForm").submit(function(event) {
+    var inputRaw = $("input#userInput").val();
+    var inputFixed = inputRaw.toUpperCase();
+    console.log(inputRaw);
+    console.log(inputFixed);
 
-    $(".classname").text(nameInput);
+    $(".classname").text(inputFixed);
 
     $("#story").show();
 
